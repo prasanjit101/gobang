@@ -6,7 +6,6 @@
 #define WIN 5
 #define DEP 3
 #define INF 0x3f3f3f3f
-
 #define WHITE 0
 #define EMPTY 1
 #define BLACK 2
@@ -51,7 +50,6 @@ void init()
         {
             p[n][j] = &m[N - j - 1][i + j];
         }
-
         l[n++] = t;
     }
     for (int i = 0; i < N; i++)
@@ -103,6 +101,7 @@ int _score(int color, bool &win)
     }
     return ans;
 }
+// checks the winner
 int winner()
 {
     for (int i = 0; i < n; i++)
@@ -122,13 +121,12 @@ int winner()
                 run++;
         }
         if (run >= WIN && color != EMPTY)
-        {
             return color;
-        }
     }
     return EMPTY;
 }
 void print();
+// calculates scores
 int score(int color)
 {
     bool win, lose;
@@ -177,6 +175,7 @@ inline void add(int x, int y)
     py[pieces] = y;
     pieces++;
 }
+// function for alpha beta pruning search
 int alphabeta(int color, int dep, int a = -INF, int b = INF)
 {
     if (!dep)
@@ -215,6 +214,7 @@ int alphabeta(int color, int dep, int a = -INF, int b = INF)
     }
     return a;
 }
+// AI implementation
 void AI(int color)
 {
     int x = -1, y = -1;
@@ -240,6 +240,7 @@ void AI(int color)
     m[x][y] = color;
 }
 char out[3] = {'O', '.', 'X'};
+// prints the state of the board
 void print()
 {
     putchar('\n');
@@ -296,16 +297,16 @@ int main()
         m[x][y] = BLACK;
         if (winner() == BLACK)
         {
-            puts("You win!!");
+            puts("You won! :)");
             goto end;
         }
         if (left == 1)
             break;
-        puts("AI thinking...");
+        puts("AI is thinking...");
         AI(WHITE);
         if (winner() == WHITE)
         {
-            puts("You lose :(");
+            puts("You lost :(");
             goto end;
         }
         print();
