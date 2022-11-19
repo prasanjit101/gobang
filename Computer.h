@@ -34,4 +34,4 @@ public:
 	void insertToHashMap(Board &, int);
 };
 
-#endif /* defined(__Gomoku__Computer__) */
+#endif

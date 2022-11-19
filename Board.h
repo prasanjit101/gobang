@@ -50,6 +50,5 @@ public:
 	bool mainDiagnolOfFive(int, int);
 	bool reverseDiagnolOfFive(int, int);
 	string toString();
-	// bool checkEmpty(int, int);
 };
-#endif /* defined(__Gomoku__Board__) */
+#endif

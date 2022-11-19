@@ -13,10 +13,8 @@ private:
 public:
 	Game();
 	void playConsole();
-
 	char getCurrentSymbol(int);
-
 	void run();
 };
 
-#endif /* defined(__Gomoku__Game__) */
+#endif

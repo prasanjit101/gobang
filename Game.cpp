@@ -84,12 +84,6 @@ void Game::playConsole()
 			v = computer.nextMoveAlphaBeta(board);
 			x = v[0];
 			y = v[1];
-			// cout << x <<" "<<y<<endl;
-			/*cout <<"Your turn. (" << getCurrentSymbol(current)<<" )"<<endl;
-			cout << "Enter X coordinate of your move: ";
-			cin >> x;
-			cout << "Enter Y coordinate of your move: ";
-			cin >> y;*/
 		}
 
 		// check if the move is legit or not
