@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.svelte": "svelte",
+        "*.tcc": "cpp",
+        "algorithm": "cpp",
+        "random": "cpp"
+    }
+}
