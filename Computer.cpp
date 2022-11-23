@@ -218,7 +218,6 @@ int Computer::evaluation(Board &board, bool isMax)
 						playerPattern[M - 4]++;
 				}
 
-				//-------------------------------------------------------------------------------
 				sameSymbol = 1; // count same symbols in rows
 				k = 1;
 				while (j - k >= 0 && board.getValue(i, j - k) == c)
@@ -271,7 +270,7 @@ int Computer::evaluation(Board &board, bool isMax)
 						playerPattern[M - 4]++;
 				}
 
-				//--------------------------------------------------------------
+				//
 
 				sameSymbol = 1; // count same symbols in main diagnol
 				k = 1;
@@ -325,7 +324,7 @@ int Computer::evaluation(Board &board, bool isMax)
 						playerPattern[M - 4]++;
 				}
 
-				//-----------------------------------------------------------------------
+				//
 
 				sameSymbol = 1; // count same symbols in reverse diagnols
 				k = 1;
@@ -390,7 +389,6 @@ int Computer::evaluation(Board &board, bool isMax)
 	sum -= playerPattern[1] * 5;
 	for (int i = 2; i < M; i++)
 	{
-		// cout <<computerPattern[i] << " : "<<playerPattern[i]<<endl;
 		x *= 100;
 		sum += computerPattern[i] * x;
 		sum -= playerPattern[i] * x * 10;
@@ -439,7 +437,6 @@ int Computer::getEvaluation(Board &board)
 }
 
 // insert values to hash map
-
 void Computer::insertToHashMap(Board &board, int eval)
 {
 	string s = board.toString();
