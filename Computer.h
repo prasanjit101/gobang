@@ -1,7 +1,3 @@
-//
-//  Computer.h
-//  Gomoku
-
 #ifndef __Gomoku__Computer__
 #define __Gomoku__Computer__
 

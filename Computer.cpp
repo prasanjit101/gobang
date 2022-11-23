@@ -1,7 +1,3 @@
-//
-//  Computer.cpp
-//  Gomoku
-
 #include <iostream>
 
 #include "Computer.h"

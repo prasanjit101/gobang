@@ -1,7 +1,3 @@
-//
-//  main.cpp
-//  Gomoku
-
 #include <iostream>
 #include "Board.h"
 #include "Game.h"

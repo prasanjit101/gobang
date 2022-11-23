@@ -1,14 +1,10 @@
-//
-//  Board.h
-//  Gomoku
-
 #ifndef __Gomoku__Board__
 #define __Gomoku__Board__
 
 #include <stdio.h>
 using namespace std;
 
-const int N = 15;
+const int N = 9;
 const int M = 5;
 
 class Board
